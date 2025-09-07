@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Industry AI CRM Design System - Professional Enterprise Theme */
+
+@layer base {
+  :root {
+    /* Core backgrounds */
+    --background: 210 20% 98%;
+    --foreground: 210 12% 12%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 210 12% 12%;
+
+    /* Popover surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 12% 12%;
+
+    /* Primary brand colors - Professional Blue */
+    --primary: 214 87% 27%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 214 87% 45%;
+
+    /* Secondary colors */
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 210 12% 12%;
+
+    /* Muted colors */
+    --muted: 210 16% 96%;
+    --muted-foreground: 210 8% 45%;
+
+    /* Accent colors */
+    --accent: 210 16% 93%;
+    --accent-foreground: 210 12% 12%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 214 87% 27%;
+
+    /* Core Enterprise Colors - Enhanced Professional Palette */
+    --enterprise-blue: 215 84% 20%;
+    --enterprise-blue-light: 214 90% 88%;
+    --enterprise-blue-dark: 215 90% 12%;
+    --enterprise-navy: 225 60% 15%;
+    --enterprise-gray: 215 20% 25%;
+    --enterprise-gray-light: 210 25% 96%;
+    --enterprise-gray-medium: 212 15% 65%;
+    --enterprise-steel: 220 15% 35%;
+    --enterprise-white: 0 0% 98%;
+    --enterprise-charcoal: 220 25% 8%;
+
+    /* Enhanced Corporate Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--enterprise-blue)) 0%, hsl(var(--enterprise-blue-light)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--enterprise-blue-light)) 0%, hsl(var(--background)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--enterprise-navy)) 0%, hsl(var(--enterprise-blue)) 50%, hsl(var(--enterprise-blue-light)) 100%);
+    --gradient-corporate: linear-gradient(180deg, hsl(var(--enterprise-white)) 0%, hsl(var(--enterprise-gray-light)) 100%);
+    --gradient-subtle: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--enterprise-gray-light)) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.25), hsl(0 0% 100% / 0.1));
+
+    /* Professional Corporate Shadows */
+    --shadow-enterprise: 0 20px 40px -10px hsl(var(--enterprise-blue) / 0.12), 0 8px 16px -4px hsl(var(--enterprise-blue) / 0.08);
+    --shadow-card: 0 8px 24px -6px hsl(var(--enterprise-gray) / 0.12), 0 4px 8px -2px hsl(var(--enterprise-gray) / 0.06);
+    --shadow-glow: 0 0 40px hsl(var(--enterprise-blue) / 0.25);
+    --shadow-elegant: 0 12px 32px -8px hsl(var(--enterprise-navy) / 0.15);
+    --shadow-soft: 0 2px 8px -2px hsl(var(--enterprise-gray) / 0.10);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    /* Enhanced Enterprise Dark Colors */
+    --enterprise-blue: 214 87% 65%;
+    --enterprise-blue-light: 214 87% 75%;
+    --enterprise-gray: 215 20.2% 65.1%;
+    --enterprise-gray-light: 217.2 32.6% 17.5%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 87% 65%), hsl(214 87% 75%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 0% / 0.25), hsl(0 0% 0% / 0.1));
+
+    /* Dark Shadows */
+    --shadow-enterprise: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 10px -2px hsl(0 0% 0% / 0.2);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+    /* Dark Sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(var(--primary)/0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--enterprise-blue)/0.02) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(var(--accent)/0.02) 0%, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Corporate Glass Effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+
+  /* Enhanced Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow {
+    from { box-shadow: var(--shadow-card); }
+    to { box-shadow: var(--shadow-glow); }
+  }
+
+  /* Corporate Button Enhancements */
+  .btn-enterprise {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground shadow-enterprise;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-enterprise:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Enhanced Card Styling */
+  .card-enterprise {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.2);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-enterprise-gray rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-enterprise-gray opacity-80;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/20 text-primary-foreground;
+}
